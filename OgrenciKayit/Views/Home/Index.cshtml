@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("OgrenciKaydet", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))  //html formuna dönüştürdük. Hangi sinifa ve o sinifin hangi metoduna gidecegini yazdik.
+    {
+
+          <!-- Form icerisinde butona basildiginda Home sinifinin OgrenciKaydet methoduna gidicek.-->
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1> Ogrenci Kayit Sayfasi</h1>
+                <p> Tum Alanlar zorunludur</p>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2"> Ogrenci Adi: </label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" name="OgrAd" placeholder="Ogrenci ismini giriniz" />
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <label class="control-label col-sm-2"> Ogrenci Soyadi :</label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" name="OgrSoyad" placeholder="Ogrenci soyismi giriniz" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2"> Ders Adi :</label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" name="DersAdi" placeholder="Ders adini giriniz" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="control-label col-sm-2"> Ders Notu :</label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" name="DersNotu" placeholder="Ders notunu giriniz" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-offset-3">
+                    <button class="btn btn-primary" type="submit" value="Ekle">Ekle</button>
+                </div>
+            </div>
+
+        </div>
+    }
+
+</body>
+</html>
